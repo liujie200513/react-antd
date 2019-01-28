@@ -1,0 +1,54 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+      "linebreak-style": [
+      "off",
+      "windows"
+      ],
+      "quotes": [
+      "warn",
+      "single"
+      ],
+      "semi": [
+      "warn",
+      "never"
+      ],
+      "dot-location": ["warn", "property"],
+      "no-debugger":"off",
+      "no-extra-bind": "warn",
+      "block-spacing": "warn",
+      "brace-style": "warn",
+      "camelcase": "warn",
+      "indent": ["warn", 4, { "SwitchCase": 1 }],
+      "key-spacing": ["warn", { "beforeColon": true }],
+      "no-const-assign": "warn",
+      "no-extra-boolean-cast": 0,
+      "no-multi-spaces": 1,
+      "jsx-quotes": 1,
+      "react/jsx-closing-bracket-location": 0, 
+      "react/jsx-boolean-value": 1, 
+      "react/no-string-refs": 1, 
+      "react/self-closing-comp": 1, 
+      "react/sort-comp": 1, 
+      "react/jsx-pascal-case": 1 ,
+      "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }]
+      
+
+      }
+}

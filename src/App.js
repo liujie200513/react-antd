@@ -1,28 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { Component } from 'react'
+import './assets/reset.less'
+import './assets/iconfont.css'
+import {Button} from 'antd'
+import {post} from './core/axios'
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    login=()=>{
+        let data = {
+            name : 'liujie',
+            password : 'password'
+        }
+        post('users/logion',data)
+    }
+    add =()=>{
+        let data = {
+            name : 'liujie',
+            password : 'password'
+        }
+        post('users/add',data)
+    }
+    render() {
+        return (
+            <div className="App">
+                <div>
+                    <Button type="primary" onClick = {this.login}>登陆</Button>
+                    <Button onClick = {this.add}>添加</Button>
+                </div>
+            </div>
+        )
+    }
 }
-
-export default App;
+export default App
