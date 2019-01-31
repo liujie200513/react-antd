@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './assets/reset.less'
 import './assets/iconfont.css'
-import {HashRouter, Switch, Route, Redirect } from 'react-router-dom'
+import './assets/app.css'
+import {HashRouter, Switch, Route} from 'react-router-dom'
 import {routesConfig} from './pages/users/routeConfig'
 
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
             <HashRouter>
                 <Switch>
                     {routesConfig.map(item => {
-                        return <Route exact path={item.path} title={item.name} component={item.component} />
+                        return <Route key = {item.name } exact path={item.path} title={item.name} component={item.component} />
                     })}
                 </Switch>
             </HashRouter>

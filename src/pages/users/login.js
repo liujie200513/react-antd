@@ -17,6 +17,7 @@ class Login extends Component {
         console.log(process)
         if(response.code == 0){
             message.success('登陆成功')
+            this.props.history.push('/homePage')
         }
     }
     register = async ()=>{
@@ -32,18 +33,14 @@ class Login extends Component {
             wrapperCol : { span : 20, offset : 4 },
         }
         return (
-            <div style = {{display : 'flex' ,justifyContent : 'center',alignItems : 'center',height : '100%'}}>
-                <div style = {{width : '400px'}}>
+            <div className = "login">
+                <div className = "user-info">
+                    <div className="logo" />
                     <Form.Item {...formItemLayout} label="用户名">
                         <Input placeholder="Please input your name" />
                     </Form.Item>
                     <Form.Item {...formItemLayout} label="密码">
                         <Input placeholder="Please input your password" />
-                    </Form.Item>
-                    <Form.Item {...formTailLayout}>
-                        <Checkbox
-                        >同意协议
-                        </Checkbox>
                     </Form.Item>
                     <Form.Item {...formTailLayout}>
                         <Button type="primary" onClick={this.login}>登陆</Button>

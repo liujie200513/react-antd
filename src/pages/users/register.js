@@ -20,16 +20,17 @@ class Register extends Component {
     }
     render() {
         const formItemLayout = {
-            labelCol : { span : 4 },
-            wrapperCol : { span : 20 },
+            labelCol : { span : 6 },
+            wrapperCol : { span : 18 },
         }
         const formTailLayout = {
-            labelCol : { span : 4 },
-            wrapperCol : { span : 20, offset : 4 },
+            labelCol : { span : 6 },
+            wrapperCol : { span : 18, offset : 4 },
         }
         return (
-            <div style = {{display : 'flex' ,justifyContent : 'center',alignItems : 'center',height : '100%'}}>
-                <div style = {{width : '400px'}}>
+            <div className = "login">
+                <div className = "user-info">
+                    <div className="logo" />
                     <Form.Item {...formItemLayout} label="用户名">
                         <Input placeholder="Please input your name" />
                     </Form.Item>
@@ -37,12 +38,7 @@ class Register extends Component {
                         <Input placeholder="Please input your password" />
                     </Form.Item>
                     <Form.Item {...formItemLayout} label="邮箱">
-                        <Input placeholder="Please input your password" />
-                    </Form.Item>
-                    <Form.Item {...formTailLayout}>
-                        <Checkbox
-                        >同意协议
-                        </Checkbox>
+                        <Input placeholder="Please input your email" />
                     </Form.Item>
                     <Form.Item {...formTailLayout}>
                         <Button type="primary" onClick={this.add}>注册</Button>

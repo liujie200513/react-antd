@@ -1,0 +1,25 @@
+.logo {
+    background-image: url('./images/logo.png');  
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    margin: 20px 40px 10px;
+  }
+  .main-logo {
+    width: 180px;
+    height: 60px;
+    background: url('./images/main-logo.jpg') center no-repeat; 
+    background-size:100% 100%;
+    margin: 16px;
+  }
+  .login {
+    display : flex ;
+    justify-content : center;
+    align-items : center;
+    height : 100%;
+    margin-bottom: 20%;
+  }
+  .user-info{
+    width : 400px ;
+    margin-bottom : 15px
+  }

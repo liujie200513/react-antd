@@ -1,6 +1,7 @@
 
 import Login from './login'
 import Register from './register'
+import HomePage from '../home/homePage'
 export const routesConfig = [
     { 
         path : '/', 
@@ -11,5 +12,10 @@ export const routesConfig = [
         path : '/register', 
         name : '注册',
         component : Register
+    },
+    { 
+        path : '/homePage', 
+        name : '账单',
+        component : HomePage
     },
 ]

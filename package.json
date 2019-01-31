@@ -72,7 +72,9 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "estart": "electron .",
-    "packge": "electron-packager . 'el-react' --platform=darwin --arch=x64 --out=./out --asar --app-version=0.0.1"
+    "packge": "electron-packager . 'el-react' --platform=darwin --arch=x64 --out=./out --asar --app-version=0.0.1",
+    "packgeWin": "electron-packager . 'el-react' --platform=win32 --arch=x64 --out=./out --asar --app-version=0.0.1",
+    "packgeLinux": "electron-packager . 'el-react' --platform=linux --arch=x64 --out=./out --asar --app-version=0.0.1"
   },
   "main": "main.js",
   "homepage": ".",
